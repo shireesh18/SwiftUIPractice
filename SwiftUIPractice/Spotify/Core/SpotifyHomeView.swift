@@ -146,7 +146,11 @@ struct SpotifyHomeView: View {
                 ScrollView(.horizontal) {
                     HStack(alignment: .top, spacing: 16) {
                         ForEach(row.products) { product in
-                            ImageTitleRowCell(imageSize: 120, imageName: product.firstImage, title: product.title)                                        }
+                            ImageTitleRowCell(imageSize: 120, imageName: product.firstImage, title: product.title) 
+                                .asButton(.press) {
+
+                                }
+                        }
                     }
                     .padding(.horizontal, 16)
                 }
