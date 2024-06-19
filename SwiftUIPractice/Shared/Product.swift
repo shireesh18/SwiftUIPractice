@@ -35,3 +35,9 @@ enum Category: String, Codable {
     case furniture = "furniture"
     case groceries = "groceries"
 }
+
+struct ProductRow: Identifiable {
+    let id = UUID().uuidString
+    let title: String
+    let products: [Product]
+}
